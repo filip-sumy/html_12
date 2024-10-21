@@ -5,41 +5,87 @@
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    background-color: white;
-    animation: changecolor 3s linear infinite alternate ;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  animation: move 5s linear infinite alternate;
 }
 
 .sun {
-    width: 100px;
-    height: 100px;
-    position:absolute;
-    top: 20%;
-    left: 20%;
-    border-radius: 50%;
-    background-color: yellow;
-    animation: move 3s linear infinite alternate ;
+  width: 300px;
+  position: absolute;
+  transition: all 5s ease;
+  z-index: 0;
+}
+
+.face {
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  transition: all 5s ease;
+}
+
+.flower-first {
+  width: 25%;
+  position: absolute;
+  top: 500px;
+  left: 50px;
+
+}
+
+.flower-second {
+  width: 25%;
+  position: absolute;
+  top: 500px;
+  left: 250px;
+
+}
+
+.flower-third {
+  width: 25%;
+  position: absolute;
+  top: 500px;
+  left: 350px;
+
+}
+
+.cloud-clone-first {
+  width: 25%;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  z-index: -1;
+}
+
+.cloud-clone-second {
+  width: 15%;
+  position: absolute;
+  top: 50px;
+  left: 480px;
+  z-index: -1;
+}
+
+.cloud-clone-third {
+  width: 25%;
+  position: absolute;
+  top: 80px;
+  left: 600px;
+  z-index: 1;
 }
 
 
-@keyframes move {
-    from {
-      left: 100px;
-      transform: scale(1.5);
-    }
-    to {
-      left: 500px;
-      transform: scale(0.8);
-    }
-  }
+.sun:hover {
+  transform: rotate(360deg)
+}
 
-  @keyframes changecolor {
-    from {
-      background-color: white;
-    }
-    to {
-      background-color: black;
-    }
+@keyframes move {
+  0%, 100% {
+    top: 0;
+    left: 0;
   }
+  50% {
+    top: 0;
+    left: 700px;
+  }
+}
