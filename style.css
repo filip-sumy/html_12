@@ -58,6 +58,14 @@
   z-index: -1;
 }
 
+.cloud-clone-first:hover {
+  transform: scale(1.4);
+}
+
+img:hover {
+  transform: skew(15deg);
+}
+
 .cloud-clone-second {
   width: 15%;
   position: absolute;
@@ -76,7 +84,7 @@
 
 
 .sun:hover {
-  transform: rotate(360deg)
+  transform: rotate(360deg);
 }
 
 @keyframes move {
